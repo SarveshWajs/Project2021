@@ -218,39 +218,7 @@
 					@endif
 				</ul>
 			</li>
-			@endif
-
-			@if((isset($value[$permission_level]['transaction-list']) && $value[$permission_level]['transaction-list'] == 1) ||
-				(isset($value[$permission_level]['withdrawal-list']) && $value[$permission_level]['withdrawal-list'] == 1))
-			<li class="{{ (Request::segment(1) == 'transactions' || Request::segment(1) == 'withdrawal_list') ? 'active open' : '' }}">
-				<a href="#" class="dropdown-toggle">
-					<i class="menu-icon fa fa-list"></i>
-					<span class="menu-text">
-						Transaction Manage
-					</span>
-
-					<b class="arrow fa fa-angle-down"></b>
-				</a>
-
-				<ul class="submenu">
-					@if(isset($value[$permission_level]['transaction-list']) && $value[$permission_level]['transaction-list'] == 1)
-					<li class="{{ (Request::segment(1) == 'transactions' && (Request::segment(2) == '' || Request::segment(3) == 'edit')) ? 'active' : '' }}">
-						<a href="{{ route('transaction.transactions.index') }}">
-							<i class="menu-icon fa fa-caret-right"></i>
-							Transaction List
-						</a>
-
-						<b class="arrow"></b>
-					</li>
-					@endif
-				</ul>
-			</li>
-			@endif
-
-			
-			
-
-			
+			@endif	
 
 			@if(isset($value[$permission_level]['shipping-fee']) && $value[$permission_level]['shipping-fee'] == 1 || 
 				isset($value[$permission_level]['setting-uom']) && $value[$permission_level]['setting-uom'] == 1)
@@ -290,16 +258,6 @@
 						<b class="arrow"></b>
 					</li>
 					@endif
-
-					
-					<li class="{{ (Request::segment(1) == 'setting_uom') ? 'active' : '' }}">
-						<a href="{{ route('setting_uom') }}">
-							<i class="menu-icon fa fa-caret-right"></i>
-							Setting UOM
-						</a>
-
-						<b class="arrow"></b>
-					</li>
 					
 				</ul>
 			</li>
