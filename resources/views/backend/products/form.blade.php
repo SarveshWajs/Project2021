@@ -99,26 +99,6 @@ if(isset($product)){
 			
 			<input type="hidden" name="item_code" class="hidden_item_code" value="{{ isset($product) ? $product->item_code: '' }}">
 
-
-
-
-			<div class="form-group">
-				<div class="row">
-					<div class="col-sm-2">
-						Type: 
-					</div>
-					<div class="col-sm-10">
-						<select class="form-control" name="product_type">
-							<option value>Select Type</option>
-							@foreach($UOMs as $uom)
-							<option {{ isset($product) && $product->product_type == $uom->id ? 'selected' : '' }} value="{{ $uom->id }}">
-								{{ $uom->uom_name }}
-							</option>
-							@endforeach
-						</select>
-					</div>
-				</div>
-			</div>
 			<hr>
 			<input type="hidden" name="variation_enable" class="variation_enable" value="{{ isset($product) ? $product->variation_enable : '0' }}">
 			<div class="non-variation-tab"
