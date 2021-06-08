@@ -63,11 +63,6 @@ else
               <p>BRAND: {{ $product->brand_name }}</p>
             </div>  
             @endif
-            @if(!empty($product->uom_name))
-            <div class="form-group">
-              <p>UOM:{{ $product->uom_name }}</p>
-            </div>
-            @endif
             <div class="row">
                 <div class="col-xs-5" align="left">
                     <h4>QUICK REVIEW </h4>      
