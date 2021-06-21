@@ -13,10 +13,6 @@ if(isset($product)){
         </h4>
         <hr>
         <li>
-           Product SKU is optional if you dont have product code
-        </li>
-        <br>
-        <li>
            Fill in Quantity for the stock
         </li>
     </div>
