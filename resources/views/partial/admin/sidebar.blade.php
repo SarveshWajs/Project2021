@@ -259,6 +259,14 @@
 					</li>
 					@endif
 					
+                    <li class="{{ (Request::segment(1) == 'setting_customer_feedback') ? 'active' : '' }}">
+						<a href="{{ route('setting_customer_feedback') }}">
+							<i class="menu-icon fa fa-caret-right"></i>
+							Customers Feedback
+						</a>
+
+						<b class="arrow"></b>
+					</li>
 				</ul>
 			</li>
 			@endif
