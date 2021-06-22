@@ -465,6 +465,20 @@ class SettingController extends Controller
         return redirect()->route('setting_agent_level');
     }
 
+         public function setting_customer_feedback()
+    {
+       
+        return view('backend.settings.setting_customer_feedback');
+    }
+  
+     public function index()
+    {
+       
+        $student =DB::select('select * from user_contacts');
+        return view('backend.settings.setting_customer_feedback',['student'=>$student]);
+    }
+  
+    
     public function setting_shipping_fee()
     {
         $settingShippingFees = SettingShippingFee::get();
