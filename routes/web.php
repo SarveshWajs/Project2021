@@ -167,7 +167,9 @@ Route::group(['middleware' => 'auth:admin,merchant,web'], function () {
 	Route::get('setting_shipping_fee', 'Backend\SettingController@setting_shipping_fee')->name('setting_shipping_fee');
 	Route::post('save_setting_shipping_fee', 'Backend\SettingController@save_setting_shipping_fee')->name('save_setting_shipping_fee');
 
-	
+	Route::get('setting_customer_feedback', 'Backend\SettingController@setting_customer_feedback')->name('setting_customer_feedback');
+    Route::get('setting_customer_feedback', 'Backend\SettingController@index')->name('setting_customer_feedback');
+    
 	Route::get('setting_website_images', 'Backend\SettingController@setting_website_images')->name('setting_website_images');
 	Route::post('save_setting_website_images', 'Backend\SettingController@save_setting_website_images')->name('save_setting_website_images');
 
