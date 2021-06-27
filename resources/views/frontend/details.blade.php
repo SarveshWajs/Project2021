@@ -69,7 +69,14 @@ else
                 </div>
                 <div class="col-xs-7">
                     <div class="" align="right">
-                       <h4>  <b> {{ !empty($product->sold_count ) ? $product->sold_count ." sold" : '' }}</b></h4>
+                       @if($product->packages == 1)
+                    @else
+                       @if($stockBalance <= 0)
+		                  <h4><b>Out of stock</b></h4>
+		               @else
+		                  <h4><b>{{ $stockBalance }} Product Left</b></h4>
+		                @endif
+                    @endif
 
                     </div>
                 </div>
@@ -102,12 +109,7 @@ else
               <div class="form-group">
                 <input class="form-control quantity" type="number" value="1" name="quantity">
                 @if($product->packages == 1)
-                @else
-                  @if($stockBalance <= 0)
-                  <span class="quantity-balance important-text">Out of stock</span>
-                  @else
-                  <span class="quantity-balance">Only {{ $stockBalance }} product</span>
-                  @endif
+                
                 @endif
               </div>
             </div>
