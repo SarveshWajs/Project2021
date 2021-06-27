@@ -201,7 +201,7 @@ $('.add-to-cart-button').click( function(e){
 				        	
 				        }
 				    });
-	            	toastr.success('{{ isset($data['lang']['lang']['Items Add To Cart']) ? $data['lang']['lang']['Items Add To Cart'] : '商品已添加到购物车'}} <a href="{{ route("checkout") }}" class="view-cart-button pull-right"><i class="fa fa-shopping-cart"></i> {{ isset($data['lang']['lang']['View Cart']) ? $data['lang']['lang']['View Cart'] : '检查购物车'}}</a>');
+	            	toastr.success('Items Add To Cart. <a href="{{ route("checkout") }}" class="view-cart-button pull-right"><i class="fa fa-shopping-cart"></i> View Cart</a>');
 	            }else{
 	            	toastr.error('Error Please Contact Admin');
 	            }
