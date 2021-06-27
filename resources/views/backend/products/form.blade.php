@@ -124,7 +124,7 @@ if(isset($product)){
 					</div>
 				</div>
 
-				<div class="form-group">
+                <div class="form-group">
 					<div class="row">
 						<div class="col-sm-2">
 							Quantity: <span class="important-text">*</span>
@@ -132,29 +132,17 @@ if(isset($product)){
 						<div class="col-sm-10">
 							@if(isset($product))
 								{{ $stockBalance }} 
+								&nbsp;&nbsp; 
+								<a href="{{ route('stock', [$product->id]) }}" class="green">
+									<i class="ace-icon fa fa-upload bigger-130"></i>
+								</a>
 							@else
 								<input type="text" class="form-control" name="quantity" value="{{ isset($product) ? $product->quantity : old('quantity') }}" placeholder="Quantity *" onkeypress="return isNumberKey(event)">
 							@endif
 						</div>
 					</div>
 				</div>
-
-				<div class="form-group">
-					<div class="row">
-						<div class="col-sm-2">
-							Sold Count: <span class="important-text">*</span>
-						</div>
-					<div class="col-sm-4">
-						<input type="text" class="form-control" name="sold_count" value="{{ isset($product) ? $product->sold_count : old('sold_count') }}" placeholder="{{ isset($product) ? $productTotalSoldCount[$product->id]." sold" : 'sold count *' }} " onkeypress="return isNumberKey(event)">
-					</div>
-					<div class="col-sm-4">
-						              Actual Product Sold: <b>{{ isset($product) ? $soldCount[$product->id] ." sold" : '0' }}</b>
-								</div>
-					
-						</div>
-					</div>
-			
-
+                
 				<div class="form-group">
 					<div class="row">
 						<div class="col-sm-2">
