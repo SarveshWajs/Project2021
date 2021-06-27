@@ -485,7 +485,6 @@
 		e.preventDefault();
 		$('.loading-gif').show();
 		var empty_fill;
-		var wallet_balance = '{{ $totalBalance }}';
 		var grand_total = $('#hidden_grand_total').val();
 		var m = '{{ request("m") }}';
 		
