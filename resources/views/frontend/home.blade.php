@@ -157,7 +157,7 @@
                                  
                             </span>
                             <div align="right" style="font-size:15px " class="form-group" >
-                                 <b> {{ !empty($featured->sold_count ) ? $featured->sold_count ." sold" : '' }}</b>
+                                 <b> {{ !empty($featured->sold_count ) ? $featured->sold_count ." Product Sold" : '' }}</b>
                             </div>
                         </div>
                       </div>
