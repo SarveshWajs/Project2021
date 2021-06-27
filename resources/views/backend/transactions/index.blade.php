@@ -13,7 +13,7 @@
 			<input type="text" class="form-control" name="dates" value="{{ !empty(request('dates')) ? request('dates') : $startDate.' - '.$endDate }}">
 		</div>
 	</div>
-	<<div class="col-sm-2">
+	<div class="col-sm-2">
 		<div class="form-group">
 			<input type="text" class="form-control" name="transaction_no" value="{{ !empty(request('transaction_no')) ? request('transaction_no') : '' }}" placeholder="Search Transaction No..">
 		</div>
@@ -252,7 +252,7 @@
 						@endif
 						&nbsp;&nbsp;
 						<a href="#" class="change_action important-text" data-id="95">
-							<i class='fa fa-trash-o'></i>{Cancel
+							<i class='fa fa-trash-o'></i>Cancel
 						</a>
 
 						
