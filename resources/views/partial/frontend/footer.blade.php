@@ -16,12 +16,10 @@
                       {!! $data['web_setting']->address !!}
                     </strong>
                   </p>
-                  <p>Email
-                    <a href="mailto:{{ $data['admin']->contact_email }}">
+                  <p>Email:
                       {{ $data['admin']->contact_email }}
-                    </a>
                   </p>
-                  <p>Phone
+                  <p>Phone:
                    {{ $data['admin']->phone }}</p>
                 </footer>
               </aside>
